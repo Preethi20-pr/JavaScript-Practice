@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+<script>
+var lib=parseInt(prompt("enter the number"));
+function book(bname,bauthor,byear,bgenre,bprice)
+{
+this.bname=bname;
+this.bauthor=bauthor;
+this.byear=byear;
+this.bgenre=bgenre;
+this.bprice=bprice;
+}
+var b1=new book("Scary house","A1",1999,"thriller",300);
+var b2=new book("APJ kallam","A2",1998,"biography",250);
+var b3=new book("My fantacy","A3",1995,"fiction",350);
+var b4=new book("since 1999","A4",1975,"ithihas",550);
+var b5=new book("That night","A5",2001,"thriller",300);
+var b6=new book("My biography","A6",1985,"biography",500);
+var b7=new book("Hunting","A7",1998,"thriller",300);
+var b8=new book("Dreamer","A8",1992,"fiction",200);
+var b9=new book("Indian History","A9",1965,"ithihas",370);
+var b10=new book("Dark room","A10",2002,"thriller",750);
+var books=[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10];
+var mybook=[];
+switch(lib)
+{
+case 1:
+var mybook=books.filter((item)=>{return item.bgenre=="thriller"});
+break;
+case 2:
+var mybook=books.filter((item)=>{return item.bgenre=="fiction"});
+break;
+case 3:
+var mybook=books.filter((item)=>{return item.bgenre=="biography"});
+break;
+case 4:
+var mybook=books.filter((item)=>{return item.bgenre=="ithihas"});
+break;
+default:res=Invalid;
+}
+for(ele of mybook)
+{
+for(list in ele)
+{
+document.write(list+":"+ele[list])
+document.write("<br>")
+}
+}
+
+</script>
+</html>
